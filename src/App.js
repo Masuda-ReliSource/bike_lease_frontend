@@ -2,9 +2,9 @@
 function App() {
   return (
     <div>
-      <header>
+      <h1 className="text-3xl font-bold underline">
         Bike Lease App
-      </header>
+      </h1>
     </div>
   );
 }
