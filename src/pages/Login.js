@@ -10,7 +10,7 @@ function Login() {
       email: data.email,
       password: data.password,
     }
-    const response = await postData('/api/v1/sessions/sign_in', params);
+    const response = await postData('sign_in', params);
     console.log(response);
   }
 
