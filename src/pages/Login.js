@@ -29,20 +29,20 @@ function Login() {
   }
 
   return (
-    <div className='h-96 flex flex-col justify-center'>
-      <h1 className='text-lg text-center'>Login</h1>
-      <div className='mx-auto py-4 flex items-center justify-center border-2 border-blue-300 w-1/3'>
+    <div className='h-screen flex flex-col justify-center'>
+      <h1 className='my-2 text-lg text-center'>Admin/Dealer Login</h1>
+      <div className='mx-auto py-4 flex justify-center border-2 border-sky-500 w-1/3'>
         <form onSubmit={handleSubmit(submitForm)}>
           {/* Email */}
           <div className='mb-4'>
             <div className='mb-2'>
-              <label>Email:</label>
+              <label>Email:<span className='text-red-500'>*</span></label>
             </div>
             <input {...register("email", { required: 'This is required' })}
             type="email"
             placeholder='Your email...'
-            className="p-2 border-2 rounded"/>
-            <p>
+            className="p-2 border-2 rounded hover:border-2 hover:border-sky-500 focus:outline-sky-500"/>
+            <p className='text-red-500'>
               {errors?.password?.message}
             </p>
           </div>
@@ -50,13 +50,14 @@ function Login() {
           {/* Password */}
           <div className='mb-4'>
           <div className='mb-2'>
-              <label>Password:</label>
+              <label>Password:<span className='text-red-500'>*</span></label>
             </div>
             <input {...register("password", { required: 'This is required.' })}
             type="password"
             placeholder='Your password...'
-            className='p-2 border-2 rounded'/>
-            <p>
+            className='p-2 border-2 rounded hover:border-2 hover:border-sky-500 
+             focus:outline-sky-500'/>
+            <p className='text-red-500'>
               {errors?.password?.message}
             </p>
           </div>
@@ -64,7 +65,8 @@ function Login() {
             <input
               type='submit'
               value='Sign In'
-              className="rounded border-2 p-2 w-full hover:bg-blue-400 hover:border-blue-400 hover:cursor-pointer"/>
+              className="rounded border-2 p-2 w-full
+               hover:bg-sky-500 hover:border-sky-500 hover:cursor-pointer hover:text-white"/>
           </div>
         </form>
       </div>
