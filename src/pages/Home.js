@@ -21,12 +21,15 @@ function Home() {
                 <Link to='/dealer/create'>Dealer Create</Link>
               </div>
               <div className='border-2 p-2 rounded hover:bg-sky-500 hover:border-sky-500 hover:text-white'>
-                <Link to='/admin/create'>Bike Lease Applications</Link>
+                <Link to='/bike_lease/apply'>Bike Lease Applications</Link>
               </div>
             </div>
           )
         : (
           <div className='mx-auto p-4 flex justify-center space-x-2 border-2 border-sky-500'>
+              <div className='border-2 p-2 rounded hover:bg-sky-500 hover:border-sky-500 hover:text-white'>
+                <Link to='/dealer/edit'>Update Profile</Link>
+              </div>
               <div className='border-2 p-2 rounded hover:bg-sky-500 hover:border-sky-500 hover:text-white'>
                 <Link to='/bike/create'>Bike Create</Link>
               </div>

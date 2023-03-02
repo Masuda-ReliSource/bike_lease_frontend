@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import AdminCreate from '../pages/AdminCreate';
 import DealerCreate from '../pages/DealerCreate';
 import BikeCreate from '../pages/BikeCreate';
+import BikeLease from '../pages/BikeLease';
 
 const RouteList = () => {
     return (
@@ -15,6 +16,7 @@ const RouteList = () => {
             <Route path="/admin/create" element={<AdminCreate />} />
             <Route path="/dealer/create" element={<DealerCreate />} />
             <Route path="/bike/create" element={<BikeCreate />} />
+            <Route path="/lease-application/create" element={<BikeLease />} />
         </Routes>
     );
 };
