@@ -1,10 +1,10 @@
+import Login from './pages/Login';
 
 function App() {
   return (
     <div>
-      <header>
-        Bike Lease App
-      </header>
+      <h1 className='text-xl text-center'>Admin/Dealer login page</h1>
+      <Login />
     </div>
   );
 }
