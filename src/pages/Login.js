@@ -2,9 +2,12 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { postData } from '../lib/http_services';
 import { toast } from 'react-toastify';
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom'; 
 
 function Login() {
-  const { register,
+  const navigate = useNavigate();
+    const { register,
           handleSubmit,
           formState: {errors} } = useForm({
           defaultValues: {
@@ -20,8 +23,11 @@ function Login() {
     }
     const response = await postData('sign_in', params);
     if (response.status === 200){
-      console.log('success');
+      console.log(response);
       toast.success('Successfully signed in.');
+      Cookies.set('token', response?.data?.data?.attributes.token);
+      Cookies.set('user_type', response?.data?.data?.attributes.user_type);
+      navigate('/', { replace: true });
     } else {
       console.log(response);
       toast.error(response?.data?.message);

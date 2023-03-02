@@ -10,7 +10,7 @@ const RouteList = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/sign-in" element={<Login />} />
             <Route path="/admin/create" element={<AdminCreate />} />
             <Route path="/dealer/create" element={<DealerCreate />} />
         </Routes>
