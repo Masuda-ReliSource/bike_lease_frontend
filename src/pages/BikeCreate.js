@@ -130,7 +130,7 @@ return (
         <div className='mt-2 flex justify-center'>
           <input
             type='submit'
-            value='Sign In'
+            value='Save'
             className="rounded border-2 p-2 w-full
              hover:bg-sky-500 hover:border-sky-500 hover:cursor-pointer hover:text-white"/>
         </div>

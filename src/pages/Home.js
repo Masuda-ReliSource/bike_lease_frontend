@@ -21,7 +21,7 @@ function Home() {
                 <Link to='/dealer/create'>Dealer Create</Link>
               </div>
               <div className='border-2 p-2 rounded hover:bg-sky-500 hover:border-sky-500 hover:text-white'>
-                <Link to='/bike_lease/apply'>Bike Lease Applications</Link>
+                <Link to='/lease-application/list'>Bike Lease Applications</Link>
               </div>
             </div>
           )
