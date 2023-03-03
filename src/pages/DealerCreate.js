@@ -2,18 +2,20 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { postData } from '../lib/http_services';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom'; 
 
 function DealerCreate() {
-    const { register,
-        handleSubmit,
-        formState: {errors} } = useForm({
-        defaultValues: {
-          name: '',
-          email: '',
-          password: '',
-          phone: ''
-        },
-      });
+  const navigate = useNavigate();
+  const { register,
+      handleSubmit,
+      formState: {errors} } = useForm({
+      defaultValues: {
+        name: '',
+        email: '',
+        password: '',
+        phone: ''
+      },
+    });
 
 const submitForm = async (data) => {
   const params = {
@@ -28,7 +30,11 @@ const submitForm = async (data) => {
   if (response.status === 201){
     console.log('success');
     toast.success('Successfully created');
-  } else {
+  }
+  else if (response.status === 401){
+    navigate('/sign-in', { replace: true});
+  } 
+  else {
     console.log(response);
     toast.error(response?.data?.message);
   }

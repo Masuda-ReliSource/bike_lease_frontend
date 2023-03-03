@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import { Space, Table } from 'antd';
 import { getAllData, updateData } from '../../lib/http_services';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom'; 
 
 const List = () => {
  const [applicationList, setApplicationList] = useState([])
+ const navigate = useNavigate();
 
  useEffect(() => {
     getApplicationList();
@@ -37,7 +39,11 @@ const List = () => {
     if (response.status === 200){
         toast.success('Request is approved successfully');
         getApplicationList();
-    } else {
+    }
+    else if (response.status === 401){
+        navigate('/sign-in', { replace: true});
+    }  
+    else {
         toast.success('Request is denied. Please try again');
     }
  }

@@ -49,7 +49,11 @@ const submitForm = async (data) => {
     console.log('success');
     toast.success('Successfully bike created');
     navigate('/', { replace: true});
-  } else {
+  }
+  else if (response.status === 401){
+    navigate('/sign-in', { replace: true});
+  }
+  else {
     console.log(response);
     toast.error(response?.data?.message);
   }
