@@ -27,9 +27,9 @@ function Home() {
           )
         : (
           <div className='mx-auto p-4 flex justify-center space-x-2 border-2 border-sky-500'>
-              <div className='border-2 p-2 rounded hover:bg-sky-500 hover:border-sky-500 hover:text-white'>
+              {/* <div className='border-2 p-2 rounded hover:bg-sky-500 hover:border-sky-500 hover:text-white'>
                 <Link to='/dealer/edit'>Update Profile</Link>
-              </div>
+              </div> */}
               <div className='border-2 p-2 rounded hover:bg-sky-500 hover:border-sky-500 hover:text-white'>
                 <Link to='/bike/create'>Bike Create</Link>
               </div>
