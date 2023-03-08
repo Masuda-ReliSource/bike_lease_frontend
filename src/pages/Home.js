@@ -7,7 +7,7 @@ function Home() {
   const userType = Cookies.get('user_type') || "";
 
   return (
-    <div className='h-screen flex flex-col justify-center'>
+    <div className='h-3/4 flex flex-col justify-center'>
       <h1 className='my-2 text-lg text-center'>{humanizeString(userType)} Dashboard</h1>
 
       {

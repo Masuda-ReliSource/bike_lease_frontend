@@ -42,7 +42,7 @@ function DealerCreate() {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-center">
+    <div className="h-3/4 flex flex-col justify-center">
       <h1 className="my-2 text-lg text-center">Create Dealer</h1>
       <div className="mx-auto py-4 flex justify-center border-2 border-sky-500 w-1/3">
         <form onSubmit={handleSubmit(submitForm)}>

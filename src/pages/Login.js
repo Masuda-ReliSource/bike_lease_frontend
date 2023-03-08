@@ -27,6 +27,7 @@ function Login() {
       toast.success('Successfully signed in.');
       Cookies.set('token', response?.data?.data?.attributes.token);
       Cookies.set('user_type', response?.data?.data?.attributes.user_type);
+      Cookies.set("logged_in", true);
       navigate('/', { replace: true });
     } else {
       console.log(response);
@@ -35,7 +36,7 @@ function Login() {
   }
 
   return (
-    <div className='h-screen flex flex-col justify-center'>
+    <div className='h-3/4 flex flex-col justify-center'>
       <h1 className='my-2 text-lg text-center'>Admin/Dealer Login</h1>
       <div className='mx-auto py-4 flex justify-center border-2 border-sky-500 w-1/3'>
         <form onSubmit={handleSubmit(submitForm)}>
