@@ -31,7 +31,7 @@ function AdminCreate() {
     const response = await postData("admin_users", params);
     if (response.status === 201) {
       console.log("success");
-      navigate("/sign-in", { replace: true });
+      navigate("/", { replace: true });
       toast.success("Successfully created");
     } else if (response.status === 401) {
       navigate("/sign-in", { replace: true });
@@ -42,7 +42,7 @@ function AdminCreate() {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-center">
+    <div className="h-3/4 flex flex-col justify-center">
       <h1 className="my-2 text-lg text-center">Create Admin</h1>
       <div className="mx-auto py-4 flex justify-center border-2 border-sky-500 w-1/3">
         <form onSubmit={handleSubmit(submitForm)}>
