@@ -3,8 +3,7 @@ import { postData } from "../lib/http_services";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import { FieldLabel } from "../components/controls/FieldLabel";
-import { FormInput } from "../components/controls/FormInput";
+import { FieldLabel, FormInput } from "../components/controls";
 
 const loginDefaultValues = {
   email: "",
